@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	h2= title
+	div#inputFrame
+		button#open open
+		button#close close
+		input#input(type='text')
+		button#send send
+	div#signals
+		div#cts CTS
+		div#dsr DSR
+		div#rts RTS
+		div#dtr DTR
+	dev#logFrame
+		dev#sendLabel
+			p send
+		dev#sendArea
+			TEXTAREA#log_send(cols="32" rows="32" wrap="on" readonly)
+		dev#recvLabel
+			p recv
+		dev#recvArea
+			TEXTAREA#log_recv(cols="32" rows="32" wrap="on" readonly)
